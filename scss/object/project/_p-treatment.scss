@@ -1,0 +1,107 @@
+.p-treatment {
+    padding-top: 80px;
+    background: #F5FCF8;
+    &__txt {
+        margin-top: 70px;
+        text-align: center;
+        letter-spacing: -0.1em;
+        & br {
+            display: none;
+            @include mq-down(sm) {
+                display: block;
+            }
+        }
+    }
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 35px;
+    }
+    &__card {
+        position: relative;
+        width: calc((100% - 20px * 2) / 3);
+        border-radius: 10px;
+        border: 2px solid #C9C9C9;
+        background: #FFFFFF;
+        padding: 42px 28px 258px; 
+        font-weight: bold;
+        overflow: hidden;
+        @include mq-down() {
+            width: 80%;
+            min-height: 350px;
+            padding: 32px;
+            margin: auto;
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+        @include mq-down(md) {
+            width: 100%;
+        }
+        @include mq-down(xs) {
+            padding: 32px 20px 200px;
+        }
+        &-ttl {
+            font-size: 2.4rem;
+            line-height: 1.5;
+            margin-top: -7px;
+            text-align: center;
+            @include mq-down() {
+                text-align: left;
+                margin-left: 40px;
+            }
+            @include mq-down(sm) {
+                text-align: center;
+                margin-left: 0;
+            }
+            
+        }
+        &-txt {
+            /*
+            カンプ(48px)-line-heighによるネガティブマージ(-11px)=38px
+            */
+            margin-top: 37px;
+            word-break: keep-all;//単語の途中で改行させない safari崩れる
+            overflow-wrap: break-word;
+            @include mq-down(xs) {
+                // word-break: break-all;
+                line-height: 2;
+                margin-top: 20px;
+            }
+            & br {
+                @media (max-width: 1243px) and (min-width: 991px) {//
+                    display: none;
+                }
+                @include mq-down(sm) {
+                    display: none;
+                }
+            }
+        }
+        &-pic {
+            position: absolute;
+            width: 50%;
+            @include mq-up() {
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            @include mq-down() {
+                right: 0;
+                bottom: 0;
+            }
+            @include mq-down(md) {
+                opacity: 0.3;
+            }
+            @include mq-down(xs) {
+                width: 60%;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                margin: auto;
+                opacity: 1;
+            }
+        }
+    }
+}

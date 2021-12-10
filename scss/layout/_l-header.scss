@@ -1,0 +1,64 @@
+.l-header {
+    width: 100%;
+    height: 130px;
+    &__inner {
+        width: 100%;
+        max-width: 1180px;
+        margin: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        @include mq-down(sm) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__logo {
+        width: 263px;
+        @include mq-down() {
+            width: 228px;
+        }
+        @include mq-down(sm) {
+            width: 200px;
+        }
+        & a, img {
+            display: block;
+        }
+    }
+    &__info {
+        text-align: center;
+        @include mq-up(sm) {
+            text-align: right;
+        }
+        &--time {
+            font-size: 1.4rem;
+            line-height: 1.35;
+            margin-top: -2px;
+            & br {
+                display: none;
+                @include mq-down() {
+                    display: block;
+                }
+                @include mq-down(sm) {
+                    display: none;
+                }
+            }
+            @include mq-down() {
+                margin-top: 8px;
+            }
+            @include mq-down(sm) {
+                font-size: 1.2rem;
+            }
+        }
+        &--tel {
+            justify-content: flex-end;
+            margin-top: 9px;
+            @include mq-down(md) {
+                margin-top: 5px;
+            }
+        }
+    }
+    
+}

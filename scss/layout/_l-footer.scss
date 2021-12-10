@@ -1,0 +1,161 @@
+.l-footer {
+    width: 100%;
+    padding: 196px 0 163px;
+    @include mq-down() {
+        padding: 80px 0;
+    }
+    &__tel {
+        @include mq-down() {
+            justify-content: center;
+        }
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        @include mq-down() {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
+    &__map {
+        width: 52%;
+        @include mq-down(xl) {
+            width: 50%;
+        }
+        @include mq-down() {
+            display: none;
+        }
+            & iframe {
+                width: 100%;
+            }
+    }
+    &__info {
+        flex-basis: calc(48% - 34px);
+        @include mq-down(xl) {  
+            flex-basis: calc(50% - 32px);  
+        }
+        @include mq-down() {
+            width: 100%;
+        }
+        &--logo {
+            width: 263px;
+            @include mq-down() {
+                width: 228px;
+                margin: auto;
+            }
+        }
+        &--add {
+            margin-top: 15px;
+            //26px-11px=15px
+            @include mq-down() {
+                text-align: center;
+            }
+            & .code {
+                padding-right: 17px;
+            }
+            & br {
+                display: none;
+                @include mq-down(md) {
+                    display: block;
+                }
+            }
+        }
+        &--map {
+            display: none;
+            @include mq-down() {
+                display: block;
+                & iframe {
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+    &__time {
+        margin-top: 30px;
+        margin-bottom: 22px;
+        border-top: 2px solid #E7E7E7;
+        border-bottom: 2px solid #E7E7E7;
+        @include mq-up() {
+            padding: 0 0 20px;
+        }
+        @include mq-down() {
+            padding: 0 48px 20px;
+        }
+        @include mq-down(md) {
+            padding: 0 20px 20px;
+        }
+        @include mq-down(sm) {
+            padding: 0 0 20px;
+        }
+        &-wrap {
+            margin-top: 20px;
+            & .item {
+                @include mq-down(md) {
+                    line-height: 1.5;
+                    height: 55px;
+                }
+            }
+            & dl {
+                display: flex;
+                font-size: 1.4rem;
+                line-height: 2.7;
+                & .ttl {
+                    width: 85px;
+                    border-right: 2px solid #E7E7E7;
+                    @include mq-down(sm) {
+                        text-align: center;
+                    }
+                    @include mq-down(xs) {
+                        width: 75px;
+                        text-align: center;
+                    }
+                }
+                & .week {
+                    padding-left: 28px;
+                    @include mq-down(sm) {
+                        padding-left: 24px;
+                    }
+                    @include mq-down(xs) {
+                        padding-left: 20px;
+                    }
+                }
+                & .time {
+                    display: flex;
+                    @include mq-down(md) {
+                        flex-direction: column;
+                    }
+                    & .am {
+                        padding-left: 23px;
+                        @include mq-down(xs) {
+                            padding-left: 16px;
+                        }
+                    }
+                    & .pm {
+                        padding-left: 18px;
+                        @include mq-down(md) {
+                            padding-left: 23px;
+                        }
+                        @include mq-down(xs) {
+                            padding-left: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__copyright {
+        display: block;
+        text-align: right;
+        margin-top: 22px;
+        /*22px-13px=9px*/
+        font-size: 1.1rem;
+        line-height: 3.4;
+        @include mq-down() {
+            text-align: center;
+            border-top: 2px solid #E7E7E7;
+            padding-top: 32px;
+            font-size: 1.2rem;
+        }
+    }
+}

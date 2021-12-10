@@ -1,0 +1,24 @@
+.c-tel {
+    display: flex;
+    @include mq-down(sm) {
+        justify-content: center;
+    }
+    &__icon {
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+        @include mq-down(md) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    &__number {
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: 1;
+        color: $color_main;
+        @include mq-down(md) {
+            font-size: 2.2rem;
+        }
+    }
+}

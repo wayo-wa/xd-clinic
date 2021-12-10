@@ -1,0 +1,54 @@
+.p-fv {
+    width: 100%;
+    height: 947px;
+    background-image: url(../../../images/fv.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include mq-down() {
+        height: 700px;
+    }
+    @include mq-down() {
+        background-position-x: 75%;
+    }
+    &__inner {
+        width: 78%;
+        margin: auto;
+        padding: 133px 0;
+        @include mq-down() {
+            padding: 200px 0;
+        }
+        @include mq-down(sm) {
+            width: 85%;
+            padding: 290px 0 0 0;
+        }
+    }
+    &__ttl {
+        writing-mode: vertical-rl;
+        &-inner {
+            display: block;
+            line-height: 1.2;
+            letter-spacing: 0.24em;
+            font-size: 2.8rem;
+            font-weight: bold;
+            padding: 20px 37px 66px;
+            margin-right: 80px;
+            margin-left: -3px;
+            /* 28px*1.21=33.8px
+            38px-28px=5.8px
+            5.8/2=2.9px */
+            background: #FFFFFF;
+            @include mq-down() {
+                font-size: 2.2rem;
+                padding: 20px 24px;
+                margin-right: 32px;
+            }
+            @include mq-down(sm) {
+                font-size: 2rem;
+                padding: 14px;
+                margin-right: 24px;
+                letter-spacing: 0.2em;
+            }
+        }
+    }
+}
