@@ -24,6 +24,6 @@ yarn add gulp-changed --dev     # 画像圧縮されたファイルを返す
 
 # コマンドで「yarn.sh」ファイルがあるディレクトリまで移動する。
 # 今回の場合だと、 cd で dental_clinic まで移動する
-# コマンドで　sh yarn.sh 実行
+# コマンドでsh yarn.sh 実行
 # gulp-sassを4.1.0にダウングレードする(yarn upgrade gulp-sass@4.1.0)
 # gulp-imageminを7.1.0にダウングレードする(yarn upgrade gulp-imagemin@4.1.0)
