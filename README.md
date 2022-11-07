@@ -2,7 +2,7 @@
 Adobe XDのデザインデータをもとに、架空の内科クリニックのHTML/CSSコーディングしました。
   
 担当：コーディング  
-使用技術：HTML, Sass(CSS), JavaScript (gulp)  
+使用技術：HTML, CSS(SCSS), JavaScript (gulp)  
 デザインツール：Adobe XD  
   
     
